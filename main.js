@@ -91,12 +91,32 @@ let quizAssets = [
 //     a:""
 // }
 let containerEl = document.querySelector(".container")
+let submitBtn = document.getElementById("submit")
+let score = 0
+
 for(let i = 0; i<quizAssets.length; i++){
     containerEl.innerHTML += `
                         <p class="question">${i+1}) ${quizAssets[i]["q"]}</p>
-                        <label for="ans[${i}]a1">${quizAssets[i]["a1"]}<input type="radio" name="ans" id="ans[${i}]a1"></label>
-                        <label for="ans[${i}]a2">${quizAssets[i]["a2"]}<input type="radio" name="ans" id="ans[${i}]a2"></label>
-                        <label for="ans[${i}]a3">${quizAssets[i]["a3"]}<input type="radio" name="ans" id="ans[${i}]a3"></label>
-                        <label for="ans[${i}]a4">${quizAssets[i]["a4"]}<input type="radio" name="ans" id="ans[${i}]a4"></label>
+                        <label for="ans[${i}]a1">${quizAssets[i]["a1"]}<input type="radio" value="${quizAssets[i]["a1"]}" class=ans${i} name="ans${i}" id="ans[${i}]a1"></label>
+                        <label for="ans[${i}]a2">${quizAssets[i]["a2"]}<input type="radio" value="${quizAssets[i]["a2"]}" class=ans${i} name="ans${i}" id="ans[${i}]a2"></label>
+                        <label for="ans[${i}]a3">${quizAssets[i]["a3"]}<input type="radio" value="${quizAssets[i]["a3"]}" class=ans${i} name="ans${i}" id="ans[${i}]a3"></label>
+                        <label for="ans[${i}]a4">${quizAssets[i]["a4"]}<input type="radio" value="${quizAssets[i]["a4"]}" class=ans${i} name="ans${i}" id="ans[${i}]a4"></label>
                             `
+}
+
+submitBtn.addEventListener("click", ()=>{
+    checkAns()
+    alert(`Total Score: ${score}/${quizAssets.length}`)
+})
+function checkAns(){
+    for(let j= 0; j<quizAssets.length; j++){
+        let ans = document.querySelector(`.ans${j}:checked`)
+        if(ans){
+            if(ans.value ===quizAssets[j]["a"]){
+                score++
+            }
+        }else{
+            return
+        }
+    }
 }
