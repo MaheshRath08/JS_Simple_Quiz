@@ -93,7 +93,7 @@ let quizAssets = [
 let containerEl = document.querySelector(".container")
 for(let i = 0; i<quizAssets.length; i++){
     containerEl.innerHTML += `
-                        <p class="question">${quizAssets[i]["q"]}</p>
+                        <p class="question">${i+1}) ${quizAssets[i]["q"]}</p>
                         <label for="ans[${i}]a1">${quizAssets[i]["a1"]}<input type="radio" name="ans" id="ans[${i}]a1"></label>
                         <label for="ans[${i}]a2">${quizAssets[i]["a2"]}<input type="radio" name="ans" id="ans[${i}]a2"></label>
                         <label for="ans[${i}]a3">${quizAssets[i]["a3"]}<input type="radio" name="ans" id="ans[${i}]a3"></label>
