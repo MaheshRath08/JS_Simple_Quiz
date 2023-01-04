@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+label{
+    display: block;
+    font-size: 1.1rem;
+    margin: 0.3rem 0;
+    color: #555;
+}
+input{
+    margin: 0 1rem;
+}
+p{
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
