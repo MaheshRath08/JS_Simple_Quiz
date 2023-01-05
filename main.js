@@ -128,4 +128,8 @@ function showAns(){
     resultEl.classList.add("result")
     resultEl.innerHTML = `<p>Your Total Score is: ${score}/${quizAssets.length}</p>
     <button id="replay">Replay</button>`
+    document.getElementById("replay").addEventListener("click", ()=>{
+            resultEl.remove()
+            location.reload()
+        })
 }
