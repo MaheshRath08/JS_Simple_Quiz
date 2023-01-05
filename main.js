@@ -106,7 +106,8 @@ for(let i = 0; i<quizAssets.length; i++){
 
 submitBtn.addEventListener("click", ()=>{
     checkAns()
-    alert(`Total Score: ${score}/${quizAssets.length}`)
+    showAns()
+    // alert(`Total Score: ${score}/${quizAssets.length}`)
 })
 function checkAns(){
     for(let j= 0; j<quizAssets.length; j++){
@@ -119,4 +120,12 @@ function checkAns(){
             return
         }
     }
+}
+
+function showAns(){
+    let resultEl = document.createElement("div")
+    document.body.appendChild(resultEl)
+    resultEl.classList.add("result")
+    resultEl.innerHTML = `<p>Your Total Score is: ${score}/${quizAssets.length}</p>
+    <button id="replay">Replay</button>`
 }
