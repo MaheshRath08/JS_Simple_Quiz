@@ -41,6 +41,8 @@ button{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background-color: #ebebeb;
+    background-color: #cacaca;
     text-align: center;
+    box-shadow: 0 0 15px 2px black;
+    border-radius: 10px;
 }
