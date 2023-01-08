@@ -129,6 +129,7 @@ function checkAns(){
 }
 
 function showAns(){
+    window.scrollTo({ top: 0, behavior: 'smooth' })
     let resultEl = document.createElement("div")
     document.body.appendChild(resultEl)
     resultEl.classList.add("result")
