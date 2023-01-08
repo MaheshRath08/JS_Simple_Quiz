@@ -112,7 +112,6 @@ submitBtn.addEventListener("click", ()=>{
     }else{
         alert("Attend all the questions!!")
     }
-    // alert(`Total Score: ${score}/${quizAssets.length}`)
 })
 function checkAns(){
     for(let j= 0; j<quizAssets.length; j++){
