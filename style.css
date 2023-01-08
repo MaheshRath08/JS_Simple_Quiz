@@ -3,10 +3,14 @@
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+body{
+    background-color: #dfffde;
+}
 .container{
     width: 60%;
     margin: 0 auto;
     text-align: center;
+    background-color: #f3f3f3;
 }
 label{
     display: block;
@@ -24,6 +28,7 @@ p{
 .btn{
     margin-top: 2rem;
     padding: 1rem;
+    background-color: inherit;
 }
 button{
     padding: 0.7rem 3rem;
