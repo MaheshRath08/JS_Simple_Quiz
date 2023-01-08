@@ -93,6 +93,7 @@ let quizAssets = [
 let containerEl = document.querySelector(".container")
 let submitBtn = document.getElementById("submit")
 let score = 0
+let attended = false
 
 for(let i = 0; i<quizAssets.length; i++){
     containerEl.innerHTML += `
@@ -106,7 +107,11 @@ for(let i = 0; i<quizAssets.length; i++){
 
 submitBtn.addEventListener("click", ()=>{
     checkAns()
-    showAns()
+    if (attended){
+        showAns()
+    }else{
+        alert("Attend all the questions!!")
+    }
     // alert(`Total Score: ${score}/${quizAssets.length}`)
 })
 function checkAns(){
@@ -116,7 +121,9 @@ function checkAns(){
             if(ans.value ===quizAssets[j]["a"]){
                 score++
             }
+            attended = true
         }else{
+            attended = false
             return
         }
     }
