@@ -11,6 +11,9 @@ body{
     margin: 0 auto;
     text-align: center;
     background-color: #f3f3f3;
+    border-radius: 20px;
+    padding: 2rem 0;
+    box-shadow: 0 0 10px 2px black;
 }
 label{
     display: block;
@@ -29,6 +32,7 @@ p{
     margin-top: 2rem;
     padding: 1rem;
     background-color: inherit;
+    box-shadow: none;
 }
 button{
     padding: 0.7rem 3rem;
