@@ -59,3 +59,11 @@ button{
     box-shadow: 0 0 15px 2px black;
     border-radius: 10px;
 }
+@media (max-width:370px) {
+    p{
+        margin: 2rem 0;
+    }
+    .container{
+        width: 90%;
+    }
+}
