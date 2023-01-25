@@ -20,6 +20,10 @@ label{
     font-size: 1.1rem;
     margin: 0.3rem 0;
     color: #555;
+    cursor: pointer;
+}
+label:hover{
+    color: orangered;
 }
 input{
     margin: 0 1rem;
